@@ -1,0 +1,2115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Lista 1 – Razão e Proporção</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f6f7fb;
+      padding: 20px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .header img {
+      height: 50px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .progress-box {
+      background: #fff;
+      padding: 12px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .progress-bar {
+      height: 10px;
+      background: #e0e0e0;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: #6c5ce7;
+      transition: 0.3s;
+    }
+
+    .acoes {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .acoes button,
+    .acoes select {
+      padding: 6px 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .questao {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .topo-questao {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .numero {
+      font-weight: bold;
+    }
+
+    .dificuldade {
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #2ecc71;
+    }
+
+    .fonte {
+      font-size: 12px;
+      color: #555;
+      margin: 6px 0 12px 0;
+    }
+
+    .alternativas label {
+      display: block;
+      background: #f1f3f8;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .alternativas label:hover {
+      background-color: #dfe6e9;
+    }
+
+    #lista-questoes {
+      max-width: 600px;
+      margin-bottom: 20px;
+      background: #fff;
+      padding: 12px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      display: none;
+    }
+
+    #lista-questoes button.quest-link {
+      margin: 3px 6px 3px 0;
+      padding: 6px 11px;
+      background: #6c5ce7;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    #lista-questoes button.quest-link:hover {
+      background: #4637a3;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+  <button onclick="window.location.href='https://sites.google.com/view/listasdequestes/listas-de-matem%C3%A1tica';"
+    style="margin-bottom: 20px; padding: 8px 16px; font-size: 14px; cursor: pointer;">Voltar</button>
+
+  <button id="btn-todas-questoes"
+    style="background:#6c5ce7; color:#fff; border:none; padding:8px 16px; font-size:14px; cursor:pointer; margin-bottom:20px; margin-left:10px;">
+    Ver todas as questões
+  </button>
+
+  <div id="lista-questoes" aria-label="Lista de Questões com atalhos">
+    <!-- Gerar 42 botões -->
+  </div>
+
+  <div class="header">
+    <img src="https://uploads.onecompiler.io/447rx8g86/447v3gtve/Logomarca.png" alt="GB Cursos" />
+    <h1>Lista 1 – Razão e Proporção</h1>
+  </div>
+
+  <div class="progress-box">
+    <strong>Progresso:</strong> <span id="contador">0</span>/42 concluídas
+    <div class="progress-bar">
+      <div class="progress-fill" id="progress"></div>
+    </div>
+  </div>
+
+  <!-- Questão 1 -->
+  <div class="questao" data-id="1" id="questao-1">
+    <div class="topo-questao">
+      <div class="numero">Questão 1</div>
+      <div class="dificuldade">Fácil</div>
+    </div>
+    <div class="fonte"><em>Enem 2013</em></div>
+    <p>
+      Em um certo teatro, as poltronas são divididas em setores. A figura apresenta a vista do setor 3 desse teatro,
+      no qual as cadeiras escuras estão reservadas e as claras não foram vendidas.
+    </p>
+
+    <!-- Espaço reservado para a imagem da questão -->
+    <div style="margin: 15px 0; text-align: center;">
+      <img src=https://cdn.designfast.io/image/2026-01-03/a733e864-588b-42a3-bd81-5b80f681f546.webp />
+    </div>
+
+    <p>
+      A razão que representa a quantidade de cadeiras reservadas do setor 3 em relação ao total de cadeiras desse mesmo setor é
+    </p>
+
+    <div class="alternativas">
+      <label><input type="radio" name="q1" value="A"> a) 17/70</label>
+      <label><input type="radio" name="q1" value="B"> b) 17/53</label>
+      <label><input type="radio" name="q1" value="C"> c) 53/70</label>
+      <label><input type="radio" name="q1" value="D"> d) 53/17</label>
+      <label><input type="radio" name="q1" value="E"> e) 70/17</label>
+    </div>
+
+    <div class="acoes">
+      <button onclick="concluir(1)">Concluí</button>
+      <button onclick="proximaQuestao(1)">Próxima questão</button>
+      <button onclick="questaoAnterior(1)">Questão anterior</button>
+      <button onclick="refazerQuestao(1)">Refazer</button>
+    </div>
+  </div>
+
+  <!-- Questão 2 -->
+  <div class="questao" data-id="2" id="questao-2" style="display:none;">
+    <div class="topo-questao">
+      <div class="numero">Questão 2</div>
+      <div class="dificuldade">Fácil</div>
+    </div>
+    <div class="fonte"><em>Enem 2020</em></div>
+    <p> Uma empresa de ônibus utiliza um sistema de vendas de passagens que fornece a imagem de todos os assentos do ônibus, diferenciando os assentos já vendidos, por uma cor mais escura, dos assentos ainda disponíveis. A empresa monitora, permanentemente, o número de assentos já vendidos e compara-o com o número total de assentos do ônibus para avaliar a necessidade de alocação de veículos extras. Na imagem tem-se a informação dos assentos já vendidos e dos ainda disponíveis em um determinado instante. </p>
+
+    <!-- Imagem com tamanho reduzido -->
+    <div style="margin: 15px 0; text-align: center; border: 2px dashed #ccc; padding: 15px 0; color: #999;">
+      <img src=https://cdn.designfast.io/image/2026-01-03/89634f0e-7342-4d5d-8ef9-f784ed409d19.webp style="max-width: 300px; width: 100%; height: auto;" />
+    </div>
+
+    <p>
+      A razão entre o número de assentos já vendidos e o total de assentos desse ônibus, no instante considerado na imagem, é:
+    </p>
+
+    <div class="alternativas">
+      <label><input type="radio" name="q2" value="A"> a) 16/42</label>
+      <label><input type="radio" name="q2" value="B"> b) 16/26</label>
+      <label><input type="radio" name="q2" value="C"> c) 26/42</label>
+      <label><input type="radio" name="q2" value="D"> d) 42/26</label>
+      <label><input type="radio" name="q2" value="E"> e) 42/16</label>
+    </div>
+
+    <div class="acoes">
+      <button onclick="concluir(2)">Concluí</button>
+      <button onclick="proximaQuestao(2)">Próxima questão</button>
+      <button onclick="questaoAnterior(2)">Questão anterior</button>
+      <button onclick="refazerQuestao(2)">Refazer</button>
+    </div>
+  </div>
+
+<!-- Questão 3 -->
+<div class="questao" data-id="3" id="questao-3" style="display:none;">
+  <div class="topo-questao">
+    <div class="numero">Questão 3</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+  <div class="fonte"><em>Enem PPL 2021</em></div>
+  <p>
+    Na loteria Lotex, cada aposta corresponde à marcação de cinquenta números em um cartão. Caso o apostador marque uma quantidade inferior a cinquenta números, o sistema completará aleatoriamente a sua aposta até integralizar os cinquenta números necessários. Por exemplo, o cartão de aposta retratado representa as escolhas de um jogador antes que o sistema integralize o seu preenchimento.
+  </p>
+
+  <!-- Espaço reservado para a imagem -->
+  <div style="margin: 15px 0; text-align: center; border: 2px dashed #ccc; padding: 20px; color: #999;">
+  <img src=https://cdn.designfast.io/image/2026-01-03/a25a0c01-d466-4d15-9336-c96aaf952c6d.png />
+  </div>
+
+  <p>
+  
+  Com relação ao cartão exibido, o jogador reconhece que o número racional que corresponde ao quociente do número de pontos marcados pelo sistema, em seu jogo, pelo número máximo de pontos para validar a aposta é igual a
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q3" value="A"> a) 11/25</label>
+    <label><input type="radio" name="q3" value="B"> b) 14/25</label>
+    <label><input type="radio" name="q3" value="C"> c) 14/11</label>
+    <label><input type="radio" name="q3" value="D"> d) 25/14</label>
+    <label><input type="radio" name="q3" value="E"> e) 25/11</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(3)">Concluí</button>
+    <button onclick="proximaQuestao(3)">Próxima questão</button>
+    <button onclick="questaoAnterior(3)">Questão anterior</button>
+    <button onclick="refazerQuestao(3)">Refazer</button>
+  </div>
+</div>
+
+<!-- QUESTÃO 04 -->
+<div class="questao" data-id="4" id="questao-4">
+  <div class="topo-questao">
+    <div class="numero">Questão 04</div>
+    <div class="dificuldade facil">Fácil</div>
+  </div>
+
+  <div class="fonte">IFRR 2016</div>
+
+  <p>
+    João comprou 4 sandálias e pagou R$ 160,00.
+    Quanto ele pagaria se comprasse 8 sandálias do mesmo tipo e preço?
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q4" value="A"> a) R$ 200,00</label>
+    <label><input type="radio" name="q4" value="B"> b) R$ 120,00</label>
+    <label><input type="radio" name="q4" value="C"> c) R$ 150,00</label>
+    <label><input type="radio" name="q4" value="D"> d) R$ 130,00</label>
+    <label><input type="radio" name="q4" value="E"> e) R$ 320,00</label>
+  </div>
+
+  <div class="acoes">
+    <button class="acerto" onclick="concluir(4)">Concluí</button>
+    <button onclick="proximaQuestao(4)">Próxima questão</button>
+    <button onclick="questaoAnterior(4)">Questão anterior</button>
+    <button onclick="refazerQuestao(4)">Refazer</button>
+  </div>
+</div>
+
+
+<!-- QUESTÃO 05 -->
+<div class="questao" data-id="5" id="questao-5">
+  <div class="topo-questao">
+    <div class="numero">Questão 05</div>
+    <div class="dificuldade facil">Fácil</div>
+  </div>
+
+  <div class="fonte">PUC-RJ 2019</div>
+
+  <p>
+  Caminhando 200 metros, um rapaz dá 320 passos. Que distância ele percorre quando dá 800 passos?
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q5" value="A"> a) 500 m</label>
+    <label><input type="radio" name="q5" value="B"> b) 525 m</label>
+    <label><input type="radio" name="q5" value="C"> c) 582 m</label>
+    <label><input type="radio" name="q5" value="D"> d) 625 m</label>
+    <label><input type="radio" name="q5" value="E"> e) 750 m</label>
+  </div>
+
+  <div class="acoes">
+    <button class="acerto" onclick="concluir(5)">Concluí</button>
+    <button onclick="proximaQuestao(5)">Próxima questão</button>
+    <button onclick="questaoAnterior(5)">Questão anterior</button>
+    <button onclick="refazerQuestao(5)">Refazer</button>
+  </div>
+</div>
+
+
+<!-- QUESTÃO 06 -->
+<div class="questao" data-id="6" id="questao-6">
+  <div class="topo-questao">
+    <div class="numero">Questão 06</div>
+    <div class="dificuldade facil">Fácil</div>
+  </div>
+
+  <div class="fonte">ETEC 2019</div>
+
+  <p>
+   No munícipio de São Paulo, segundo dados do Instituto Brasileiro de Geografia e Estatística (IBGE), existem 12 milhões de habitantes e, segundo o Repositório de Dados Eleitorais do Tribunal Superior Eleitoral (TSE), no mesmo município, existem 9 milhões de eleitores registrados.
+
+Nessas condições, pode-se afirmar que, no munícipio de São Paulo, para cada 3 eleitores registrados, existem 
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q6" value="A"> a) 75 habitantes</label>
+    <label><input type="radio" name="q6" value="B"> b) 40 habitantes</label>
+    <label><input type="radio" name="q6" value="C"> c) 30 habitantes</label>
+    <label><input type="radio" name="q6" value="D"> d) 4 habitantes</label>
+    <label><input type="radio" name="q6" value="E"> e) 3 habitantes</label>
+  </div>
+
+  <div class="acoes">
+    <button class="acerto" onclick="concluir(6)">Concluí</button>
+    <button onclick="proximaQuestao(6)">Próxima questão</button>
+    <button onclick="questaoAnterior(6)">Questão anterior</button>
+    <button onclick="refazerQuestao(6)">Refazer</button>
+  </div>
+</div>
+
+
+<!-- QUESTÃO 07 -->
+<div class="questao" data-id="7" id="questao-7">
+  <div class="topo-questao">
+    <div class="numero">Questão 07</div>
+    <div class="dificuldade facil">Fácil</div>
+  </div>
+
+  <div class="fonte">IFAL 2018</div>
+
+  <p>
+    Certo profissional técnico cobra R$ 100,00 por visita
+    e mais R$ 20,00 por hora de serviço.
+    Se um cliente o contrata para trabalhar durante 4 horas,
+    que valor irá desembolsar?
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q7" value="A"> a) R$ 100,00</label>
+    <label><input type="radio" name="q7" value="B"> b) R$ 120,00</label>
+    <label><input type="radio" name="q7" value="C"> c) R$ 140,00</label>
+    <label><input type="radio" name="q7" value="D"> d) R$ 160,00</label>
+    <label><input type="radio" name="q7" value="E"> e) R$ 180,00</label>
+  </div>
+
+  <div class="acoes">
+    <button class="acerto" onclick="concluir(7)">Concluí</button>
+    <button onclick="proximaQuestao(7)">Próxima questão</button>
+    <button onclick="questaoAnterior(7)">Questão anterior</button>
+    <button onclick="refazerQuestao(7)">Refazer</button>
+  </div>
+</div>
+
+<!-- QUESTÃO 08 -->
+<div class="questao" data-id="8" id="questao-8">
+  <div class="topo-questao">
+    <div class="numero">Questão 08</div>
+    <div class="dificuldade facil">Fácil</div>
+  </div>
+
+  <div class="fonte">ENEM PPL 2014</div>
+
+  <p>
+    André, Carlos e Fábio estudam em uma mesma escola e desejam saber quem mora mais perto da escola.
+    André mora a cinco vinte avos de um quilômetro da escola.
+    Carlos mora a seis quartos de um quilômetro da escola.
+    Já Fábio mora a quatro sextos de um quilômetro da escola.
+    A ordenação dos estudantes de acordo com a ordem decrescente das distâncias é:
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q8" value="A"> a) André, Carlos e Fábio</label>
+    <label><input type="radio" name="q8" value="B"> b) André, Fábio e Carlos</label>
+    <label><input type="radio" name="q8" value="C"> c) Carlos, André e Fábio</label>
+    <label><input type="radio" name="q8" value="D"> d) Carlos, Fábio e André</label>
+    <label><input type="radio" name="q8" value="E"> e) Fábio, Carlos e André</label>
+  </div>
+
+  <div class="acoes">
+    <button class="acerto" onclick="concluir(8)">Concluí</button>
+    <button onclick="proximaQuestao(8)">Próxima questão</button>
+    <button onclick="questaoAnterior(8)">Questão anterior</button>
+    <button onclick="refazerQuestao(8)">Refazer</button>
+  </div>
+</div>
+
+
+<!-- QUESTÃO 09 -->
+<div class="questao" data-id="9" id="questao-9">
+  <div class="topo-questao">
+    <div class="numero">Questão 09</div>
+    <div class="dificuldade facil">Fácil</div>
+  </div>
+
+  <div class="fonte">ENEM PPL 2010</div>
+
+  <p>
+    Há um novo impulso para produzir combustível a partir de gordura animal.
+    Uma biorrefinaria converte a gordura do porco, juntamente com o óleo vegetal, em biodiesel.
+    A expectativa da fábrica é transformar 14 milhões de quilogramas de banha
+    em 112 milhões de litros de biodiesel.
+    <br><br>
+    Considere que haja uma proporção direta entre a massa de banha transformada
+    e o volume de biodiesel produzido.
+    Para produzir 48 milhões de litros de biodiesel, a massa de banha necessária,
+    em quilogramas, será, aproximadamente:
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q9" value="A"> a) 6 milhões</label>
+    <label><input type="radio" name="q9" value="B"> b) 33 milhões</label>
+    <label><input type="radio" name="q9" value="C"> c) 78 milhões</label>
+    <label><input type="radio" name="q9" value="D"> d) 146 milhões</label>
+    <label><input type="radio" name="q9" value="E"> e) 384 milhões</label>
+  </div>
+
+  <div class="acoes">
+    <button class="acerto" onclick="concluir(9)">Concluí</button>
+    <button onclick="proximaQuestao(9)">Próxima questão</button>
+    <button onclick="questaoAnterior(9)">Questão anterior</button>
+    <button onclick="refazerQuestao(9)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 10 -->
+<div class="questao" data-id="10" id="questao-10">
+  <div class="topo-questao">
+    <div class="numero">Questão 10</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte">
+    <em>ENEM PPL 2016 – Reaplicação</em>
+  </div>
+
+  <p>
+    O sódio está presente na maioria dos alimentos industrializados, podendo causar problemas cardíacos em pessoas
+    que ingerem grandes quantidades desses alimentos. Os médicos recomendam que seus pacientes diminuam o consumo de sódio.
+  </p>
+
+  <p>
+    Com base nas informações nutricionais de cinco marcas de biscoitos (A, B, C, D e E), construiu-se o gráfico,
+    que relaciona quantidades de sódio com porções de diferentes biscoitos.
+  </p>
+
+  <div style="margin: 15px 0; text-align: center;">
+  <img 
+    src="https://cdn.designfast.io/image/2026-01-03/8f5681c3-848b-4054-8696-676eec19f2a1.jpeg"
+    alt="Gráfico relacionando a quantidade de sódio e a porção de biscoitos"
+    style="max-width: 100%; height: auto;"
+  />
+</div>
+
+  <p>
+    Qual das marcas de biscoito apresentadas tem a menor quantidade de sódio por grama do produto?
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q10" value="A"> a) A</label>
+    <label><input type="radio" name="q10" value="B"> b) B</label>
+    <label><input type="radio" name="q10" value="C"> c) C</label>
+    <label><input type="radio" name="q10" value="D"> d) D</label>
+    <label><input type="radio" name="q10" value="E"> e) E</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(10)">Concluí</button>
+    <button onclick="proximaQuestao(10)">Próxima questão</button>
+    <button onclick="questaoAnterior(10)">Questão anterior</button>
+    <button onclick="refazerQuestao(10)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 11 -->
+<div class="questao" data-id="11" id="questao-11">
+  <div class="topo-questao">
+    <div class="numero">Questão 11</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte">
+    <em>ENEM PPL 2016</em>
+  </div>
+
+  <p>
+    A economia no consumo de combustível é um fator importante para a escolha de um carro.
+    É considerado mais econômico o carro que percorre a maior distância por litro de combustível.
+  </p>
+
+  <p>
+    O gráfico apresenta a distância (km) e o respectivo consumo de gasolina (L) de cinco modelos de carros.
+  </p>
+
+  <!-- Espaço reservado para a imagem da questão -->
+  <div style="margin: 15px 0; text-align: center;">
+  <img 
+    src="https://res.cloudinary.com/demx2vuon/image/upload/v1767630848/image-76.png_q04a02.webp"
+    alt="Gráfico da distância percorrida e consumo de combustível dos carros"
+    style="max-width: 100%; height: auto; display: block;"
+  />
+</div>
+
+  <p>
+    O carro mais econômico em relação ao consumo de combustível é o modelo
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q11" value="A"> a) A</label>
+    <label><input type="radio" name="q11" value="B"> b) B</label>
+    <label><input type="radio" name="q11" value="C"> c) C</label>
+    <label><input type="radio" name="q11" value="D"> d) D</label>
+    <label><input type="radio" name="q11" value="E"> e) E</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(11)">Concluí</button>
+    <button onclick="proximaQuestao(11)">Próxima questão</button>
+    <button onclick="questaoAnterior(11)">Questão anterior</button>
+    <button onclick="refazerQuestao(11)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 12 -->
+<div class="questao" data-id="12" id="questao-12">
+  <div class="topo-questao">
+    <div class="numero">Questão 12</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte">
+    <em>ENEM 2022</em>
+  </div>
+
+  <p>
+    Uma instituição de ensino superior ofereceu vagas em um processo seletivo de acesso a seus cursos.
+    Finalizadas as inscrições, foi divulgada a relação do número de candidatos por vaga em cada um dos cursos oferecidos.
+    Esses dados são apresentados no quadro.
+  </p>
+
+  <!-- Espaço reservado para a imagem da questão -->
+  <div style="margin: 15px 0; text-align: center;">
+  <img 
+    src="https://res.cloudinary.com/demx2vuon/image/upload/v1767631019/m-um-processo-seletivo-de-acesso-a-seus-cursos_jlpudf.webp"
+    alt="Gráfico da distância percorrida e consumo de combustível dos carros"
+    style="max-width: 100%; height: auto; display: block;"
+  />
+</div>
+
+
+  <p>
+    Qual foi o número total de candidatos inscritos nesse processo seletivo?
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q12" value="A"> a) 200</label>
+    <label><input type="radio" name="q12" value="B"> b) 400</label>
+    <label><input type="radio" name="q12" value="C"> c) 1 200</label>
+    <label><input type="radio" name="q12" value="D"> d) 1 235</label>
+    <label><input type="radio" name="q12" value="E"> e) 7 200</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(12)">Concluí</button>
+    <button onclick="proximaQuestao(12)">Próxima questão</button>
+    <button onclick="questaoAnterior(12)">Questão anterior</button>
+    <button onclick="refazerQuestao(12)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 13 -->
+<div class="questao" data-id="13" id="questao-13">
+  <div class="topo-questao">
+    <div class="numero">Questão 13</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte">
+    <em>ENEM PPL 2016</em>
+  </div>
+
+  <p>
+    O técnico de um time de voleibol registra o número de jogadas e de acertos, por atleta,
+    em cada fundamento, para verificar os desempenhos dos jogadores.
+  </p>
+
+  <p>
+    Para que o time tenha um melhor aproveitamento no fundamento bloqueio, ele decide substituir
+    um dos jogadores em quadra por um dos que estão no banco de reservas. O critério a ser adotado
+    é o de escolher o atleta que, no fundamento bloqueio, tenha apresentado o maior número de acertos
+    em relação ao número de jogadas de que tenha participado.
+  </p>
+
+  <p>
+    Os registros dos cinco atletas que se encontram no banco de reservas, nesse fundamento,
+    estão apresentados no quadro.
+  </p>
+
+  <!-- Espaço reservado para a imagem da questão -->
+  <div style="margin: 15px 0; text-align: center;">
+  <img 
+    src="https://res.cloudinary.com/demx2vuon/image/upload/v1767631114/o-tecnico-de-um-time_zaauf2.webp"
+    alt="Gráfico da distância percorrida e consumo de combustível dos carros"
+    style="max-width: 100%; height: auto; display: block;"
+  />
+</div>
+
+
+  <p>
+    Qual dos atletas do banco de reservas o treinador deve colocar em quadra?
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q13" value="I"> a) I</label>
+    <label><input type="radio" name="q13" value="II"> b) II</label>
+    <label><input type="radio" name="q13" value="III"> c) III</label>
+    <label><input type="radio" name="q13" value="IV"> d) IV</label>
+    <label><input type="radio" name="q13" value="V"> e) V</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(13)">Concluí</button>
+    <button onclick="proximaQuestao(13)">Próxima questão</button>
+    <button onclick="questaoAnterior(13)">Questão anterior</button>
+    <button onclick="refazerQuestao(13)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 14 -->
+<div class="questao" data-id="14" id="questao-14">
+  <div class="topo-questao">
+    <div class="numero">Questão 14</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte">
+    <em>ENEM PPL 2016</em>
+  </div>
+
+  <p>
+    Cinco máquinas de costura são utilizadas em uma confecção de calças.
+    O proprietário deseja comprar mais uma dessas máquinas, idêntica a uma das já existentes,
+    devendo escolher a que tiver a maior média de produção por hora.
+  </p>
+
+  <p>
+    Na tabela estão indicadas as quantidades de horas trabalhadas e de calças confeccionadas
+    por cada uma das máquinas em determinados períodos observados.
+  </p>
+
+  <!-- Espaço reservado para a imagem da questão -->
+  <div style="margin: 15px 0; text-align: center;">
+  <img 
+    src="https://res.cloudinary.com/demx2vuon/image/upload/v1767631193/image-80.png_i6oait.webp"
+    alt="Gráfico da distância percorrida e consumo de combustível dos carros"
+    style="max-width: 100%; height: auto; display: block;"
+  />
+</div>
+
+
+  <p>
+    A máquina a ser comprada deverá ser idêntica a:
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q14" value="1"> a) 1</label>
+    <label><input type="radio" name="q14" value="2"> b) 2</label>
+    <label><input type="radio" name="q14" value="3"> c) 3</label>
+    <label><input type="radio" name="q14" value="4"> d) 4</label>
+    <label><input type="radio" name="q14" value="5"> e) 5</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(14)">Concluí</button>
+    <button onclick="proximaQuestao(14)">Próxima questão</button>
+    <button onclick="questaoAnterior(14)">Questão anterior</button>
+    <button onclick="refazerQuestao(14)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 15 -->
+<div class="questao" data-id="15" id="questao-15">
+  <div class="topo-questao">
+    <div class="numero">Questão 15</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte">
+    <em>ENEM 2022</em>
+  </div>
+
+  <p>
+    Uma pessoa precisa contratar um operário para fazer um serviço em sua casa.
+    Para isso, ela postou um anúncio em uma rede social.
+  </p>
+
+  <p>
+    Cinco pessoas responderam informando preços por hora trabalhada, gasto diário com transporte
+    e tempo necessário para conclusão do serviço, conforme valores apresentados no quadro.
+  </p>
+
+  <!-- Espaço reservado para a imagem da questão -->
+  <div style="margin: 15px 0; text-align: center;">
+  <img 
+    src="https://res.cloudinary.com/demx2vuon/image/upload/v1767631247/Uma-pessoa-precisa-contratar-um-operario-para-fazer-um-servico-em-sua-casa.-Para-isso-ela-postou-um-anuncio-em-uma-rede-social_wfjmnp.webp"
+    alt="Gráfico da distância percorrida e consumo de combustível dos carros"
+    style="max-width: 100%; height: auto; display: block;"
+  />
+</div>
+
+
+  <p>
+    Se a pessoa pretende gastar o mínimo possível com essa contratação,
+    irá contratar o operário
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q15" value="I"> a) I</label>
+    <label><input type="radio" name="q15" value="II"> b) II</label>
+    <label><input type="radio" name="q15" value="III"> c) III</label>
+    <label><input type="radio" name="q15" value="IV"> d) IV</label>
+    <label><input type="radio" name="q15" value="V"> e) V</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(15)">Concluí</button>
+    <button onclick="proximaQuestao(15)">Próxima questão</button>
+    <button onclick="questaoAnterior(15)">Questão anterior</button>
+    <button onclick="refazerQuestao(15)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 16 -->
+<div class="questao" data-id="16" id="questao-16">
+  <div class="topo-questao">
+    <div class="numero">Questão 16</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte">
+    <em>ENEM 2012</em>
+  </div>
+
+  <p>
+    Uma mãe recorreu à bula para verificar a dosagem de um remédio que precisava dar a seu filho.
+    Na bula, recomendava-se a seguinte dosagem:
+    <strong>5 gotas para cada 2 kg de massa corporal a cada 8 horas</strong>.
+  </p>
+
+  <p>
+    Se a mãe ministrou corretamente 30 gotas do remédio a seu filho a cada 8 horas,
+    então a massa corporal dele é de
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q16" value="A"> A) 12 kg</label>
+    <label><input type="radio" name="q16" value="B"> B) 16 kg</label>
+    <label><input type="radio" name="q16" value="C"> C) 24 kg</label>
+    <label><input type="radio" name="q16" value="D"> D) 36 kg</label>
+    <label><input type="radio" name="q16" value="E"> E) 75 kg</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(16)">Concluí</button>
+    <button onclick="proximaQuestao(16)">Próxima questão</button>
+    <button onclick="questaoAnterior(16)">Questão anterior</button>
+    <button onclick="refazerQuestao(16)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 17 -->
+<div class="questao" data-id="17" id="questao-17">
+  <div class="topo-questao">
+    <div class="numero">Questão 17</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte">
+    <em>ENEM PPL 2023</em>
+  </div>
+
+  <p>
+    Uma imobiliária pôs cinco apartamentos à venda em cinco prédios diferentes de uma cidade brasileira.
+    O quadro apresenta o preço e a área de cada um desses imóveis.
+  </p>
+
+  <!-- Espaço reservado para a imagem da questão -->
+ <div style="margin: 15px 0; text-align: center;">
+  <img 
+    src="https://res.cloudinary.com/demx2vuon/image/upload/v1767631909/image-139_q2pigx.png"
+    alt="Gráfico da distância percorrida e consumo de combustível dos carros"
+    style="max-width: 100%; height: auto; display: block;"
+  />
+</div>
+
+
+  <p>
+    Um investidor decidiu comprar o apartamento com o menor preço por metro quadrado dentre os cinco apresentados.
+  </p>
+
+  <p>
+    Ele deverá comprar o apartamento
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q17" value="I"> A) I</label>
+    <label><input type="radio" name="q17" value="II"> B) II</label>
+    <label><input type="radio" name="q17" value="III"> C) III</label>
+    <label><input type="radio" name="q17" value="IV"> D) IV</label>
+    <label><input type="radio" name="q17" value="V"> E) V</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(17)">Concluí</button>
+    <button onclick="proximaQuestao(17)">Próxima questão</button>
+    <button onclick="questaoAnterior(17)">Questão anterior</button>
+    <button onclick="refazerQuestao(17)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 18 -->
+<div class="questao" data-id="18" id="questao-18">
+  <div class="topo-questao">
+    <div class="numero">Questão 18</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte">
+    <em>ENEM PPL 2013</em>
+  </div>
+
+  <p>
+    Médicos alertam sobre a importância de educar as crianças para terem hábitos alimentares saudáveis.
+    Por exemplo, analisando-se uma bolacha com recheio de chocolate (25 g) e um pé de alface (25 g),
+    observam-se as seguintes quantidades de nutrientes, respectivamente:
+  </p>
+
+  <ul>
+    <li>carboidratos: 15 g e 0,5 g;</li>
+    <li>proteínas: 1,9 g e 0,5 g.</li>
+  </ul>
+
+  <p>
+    <em>Disponível em: veja.abril.com.br. Acesso em: 27 abr. 2010 (adaptado).</em>
+  </p>
+
+  <p>
+    Considerando as informações apresentadas, qual deve ser o número de pés de alface consumidos
+    para se obter a mesma quantidade de carboidratos de uma bolacha?
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q18" value="A"> a) 50</label>
+    <label><input type="radio" name="q18" value="B"> b) 30</label>
+    <label><input type="radio" name="q18" value="C"> c) 14</label>
+    <label><input type="radio" name="q18" value="D"> d) 8</label>
+    <label><input type="radio" name="q18" value="E"> e) 7</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(18)">Concluí</button>
+    <button onclick="proximaQuestao(18)">Próxima questão</button>
+    <button onclick="questaoAnterior(18)">Questão anterior</button>
+    <button onclick="refazerQuestao(18)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 19 -->
+<div class="questao" data-id="19" id="questao-19">
+  <div class="topo-questao">
+    <div class="numero">Questão 19</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte">
+    <em>ENEM LIBRAS 2017</em>
+  </div>
+
+  <p>
+    Uma padaria fabrica biscoitos que são embalados em pacotes com dez unidades, e cada pacote pesa 85 gramas. Na informação ao consumidor lê-se: “A cada 15 gramas do biscoito correspondem 90 quilocalorias”. Quantas quilocalorias tem um desses biscoitos?
+  </p>
+
+
+  <div class="alternativas">
+    <label><input type="radio" name="q19" value="A"> a) 6</label>
+    <label><input type="radio" name="q19" value="B"> b) 14</label>
+    <label><input type="radio" name="q19" value="C"> c) 51</label>
+    <label><input type="radio" name="q19" value="D"> d) 60</label>
+    <label><input type="radio" name="q19" value="E"> e) 510</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(19)">Concluí</button>
+    <button onclick="proximaQuestao(19)">Próxima questão</button>
+    <button onclick="questaoAnterior(19)">Questão anterior</button>
+    <button onclick="refazerQuestao(19)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 20 -->
+<div class="questao" data-id="20" id="questao-20">
+  <div class="topo-questao">
+    <div class="numero">Questão 20</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte">
+    <em>ENEM PPL 2017</em>
+  </div>
+
+  <p>
+   Duas amigas irão fazer um curso no exterior durante 60 dias e usarão a mesma marca de xampu. Uma delas gasta um frasco desse xampu em 10 dias enquanto que a outra leva 20 dias para gastar um frasco com o mesmo volume. Elas combinam de usar, conjuntamente, cada frasco de xampu que levarem. O número mínimo de frascos de xampu que deverão Ievar nessa viagem é 
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q20" value="A"> a) 2</label>
+    <label><input type="radio" name="q20" value="B"> b) 4</label>
+    <label><input type="radio" name="q20" value="C"> c) 6</label>
+    <label><input type="radio" name="q20" value="D"> d) 8</label>
+    <label><input type="radio" name="q20" value="E"> e) 9</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(20)">Concluí</button>
+    <button onclick="proximaQuestao(20)">Próxima questão</button>
+    <button onclick="questaoAnterior(20)">Questão anterior</button>
+    <button onclick="refazerQuestao(20)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 21 -->
+<div class="questao" data-id="21" id="questao-21">
+  <div class="topo-questao">
+    <div class="numero">Questão 21</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte">
+    <em>ENEM PPL 2010</em>
+  </div>
+
+  <p>
+    Desde 2005, o Banco Central não fabrica mais a nota de R$ 1,00 e, desde então,
+    só produz dinheiro nesse valor em moedas. Apesar de ser mais caro produzir uma moeda,
+    a durabilidade do metal é 30 vezes maior que a do papel.
+  </p>
+
+  <p>
+    Fabricar uma moeda de R$ 1,00 custa R$ 0,26, enquanto uma nota custa R$ 0,17,
+    entretanto, a cédula dura de oito a onze meses.
+  </p>
+
+  <p>
+    Com R$ 1 000,00 destinados a fabricar moedas, o Banco Central conseguiria fabricar,
+    aproximadamente, quantas cédulas a mais?
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q21" value="A"> a) 1667</label>
+    <label><input type="radio" name="q21" value="B"> b) 2036</label>
+    <label><input type="radio" name="q21" value="C"> c) 3846</label>
+    <label><input type="radio" name="q21" value="D"> d) 4300</label>
+    <label><input type="radio" name="q21" value="E"> e) 5882</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(21)">Concluí</button>
+    <button onclick="proximaQuestao(21)">Próxima questão</button>
+    <button onclick="questaoAnterior(21)">Questão anterior</button>
+    <button onclick="refazerQuestao(21)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 22 -->
+<div class="questao" data-id="22" id="questao-22">
+  <div class="topo-questao">
+    <div class="numero">Questão 22</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte">
+    <em>ENEM PPL 2022</em>
+  </div>
+
+  <p>
+    Definem-se o dia e o ano de um planeta de um sistema solar como sendo, respectivamente, o tempo que o planeta leva para dar 1 volta completa em torno de seu próprio eixo de rotação e o tempo para dar 1 volta completa em torno de seu Sol.
+  </p>
+
+  <p>
+   Suponha que exista um planeta Z, em algum sistema solar, onde um dia corresponda a 73 dias terrestres e que 2 de seus anos correspondam a 1 ano terrestre. Considere que 1 ano terrestre tem 365 de seus dias.
+
+
+  </p>
+
+  <p>
+  No planeta Z, seu ano corresponderia a quantos de seus dias?
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q22" value="A"> a) 2,5</label>
+    <label><input type="radio" name="q22" value="B"> b) 10,0</label>
+    <label><input type="radio" name="q22" value="C"> c) 730,0</label>
+    <label><input type="radio" name="q22" value="D"> d) 13 322,5</label>
+    <label><input type="radio" name="q22" value="E"> e) 53 290,0</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(22)">Concluí</button>
+    <button onclick="proximaQuestao(22)">Próxima questão</button>
+    <button onclick="questaoAnterior(22)">Questão anterior</button>
+    <button onclick="refazerQuestao(22)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 23 -->
+<div class="questao" data-id="23" id="questao-23">
+  <div class="topo-questao">
+    <div class="numero">Questão 23</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte">
+    <em>ENEM 2025</em>
+  </div>
+
+  <p>
+    Na cantina de uma escola, há cinco alimentos vendidos em pacotes com diferentes quantidades de porções.
+    As informações nutricionais contidas nos rótulos desses produtos estão indicadas nas imagens.
+  </p>
+
+  <!-- Espaço reservado para a imagem da questão -->
+ <div style="margin: 15px 0; text-align: center;">
+  <img 
+    src="https://res.cloudinary.com/demx2vuon/image/upload/v1767633280/mtm140enunciado_yd6ed8.png"
+    alt="Gráfico da distância percorrida e consumo de combustível dos carros"
+    style="max-width: 100%; height: auto; display: block;"
+  />
+</div>
+
+
+  <p>
+    Uma estudante opta sempre pelo alimento com a menor quantidade total de sódio por pacote.
+    Qual desses produtos deve ser o escolhido pela estudante?
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q23" value="A"> A) Batata chips</label>
+    <label><input type="radio" name="q23" value="B"> B) Palitos salgados</label>
+    <label><input type="radio" name="q23" value="C"> C) Biscoito multigrãos</label>
+    <label><input type="radio" name="q23" value="D"> D) Biscoito de polvilho</label>
+    <label><input type="radio" name="q23" value="E"> E) Biscoito de água e sal</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(23)">Concluí</button>
+    <button onclick="proximaQuestao(23)">Próxima questão</button>
+    <button onclick="questaoAnterior(23)">Questão anterior</button>
+    <button onclick="refazerQuestao(23)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 24 -->
+<div class="questao" data-id="24" id="questao-24">
+  <div class="topo-questao">
+    <div class="numero">Questão 24</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte">
+    <em>ENEM 2025</em>
+  </div>
+
+  <p>
+     Pesquisas na área de neurobiologia confirmam que a prática meditativa é responsável por diminuir consideravelmente a frequência respiratória para praticantes avançados, que, após iniciarem a meditação, têm suas frequências respiratórias reduzidas até se estabilizarem em um nível mais baixo. O gráfico apresenta a relação da frequência respiratória, em incursões de respirações por minuto (rpm), em relação ao tempo, em minuto, de um praticante avançado, em que (f1) representa a frequência no instante t1, no qual se inicia a prática meditativa; e (f2), a frequência no instante t2, a partir do qual esta se estabiliza durante a meditação.
+  </p>
+
+  <!-- Espaço reservado para imagem -->
+ <div style="margin: 15px 0; text-align: center;">
+  <img 
+    src="https://res.cloudinary.com/demx2vuon/image/upload/v1767633331/mtm142enunciado_ki5gbo.png"
+    alt="Gráfico da distância percorrida e consumo de combustível dos carros"
+    style="max-width: 100%; height: auto; display: block;"
+  />
+</div>
+
+
+  <p>
+    A partir do instante t<sub>1</sub>, em que se inicia a prática meditativa, o comportamento da
+    frequência respiratória, em relação ao tempo,
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q24" value="A"> A) mantém-se constante.</label>
+    <label><input type="radio" name="q24" value="B"> B) é diretamente proporcional ao tempo.</label>
+    <label><input type="radio" name="q24" value="C"> C) é inversamente proporcional ao tempo.</label>
+    <label><input type="radio" name="q24" value="D"> D) diminui até o instante t<sub>2</sub>, a partir do qual se torna constante.</label>
+    <label><input type="radio" name="q24" value="E"> E) diminui de forma proporcional ao tempo, tanto entre t<sub>1</sub> e t<sub>2</sub> quanto após t<sub>2</sub>.</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(24)">Concluí</button>
+    <button onclick="proximaQuestao(24)">Próxima questão</button>
+    <button onclick="questaoAnterior(24)">Questão anterior</button>
+    <button onclick="refazerQuestao(24)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 25 -->
+<div class="questao" data-id="25" id="questao-25">
+  <div class="topo-questao">
+    <div class="numero">Questão 25</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte">
+    <em>ENEM 2025</em>
+  </div>
+
+  <p>
+   Uma pessoa pretende instalar um kit de gás natural veicular (GNV) em seu carro. Na loja que escolheu para realizar a compra e instalação desse kit, havia cinco modelos de cilindro para armazenamento do gás, cujas capacidades, em metro cúbico, eram, respectivamente: 10, 14, 17, 21 e 25. O preço do cilindro é proporcional à sua capacidade. Esse carro rodará 30 km diariamente, 7 dias por semana, e o consumo do GNV é de 1 m³ a cada 13 km rodados. A pessoa escolherá o modelo de cilindro de menor preço e que garanta apenas um abastecimento semanal.
+  </p>
+
+  <p>
+    Nessas condições, qual será a capacidade, em metro cúbico, do cilindro escolhido por essa pessoa?
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q25" value="A"> A) 10</label>
+    <label><input type="radio" name="q25" value="B"> B) 14</label>
+    <label><input type="radio" name="q25" value="C"> C) 17</label>
+    <label><input type="radio" name="q25" value="D"> D) 21</label>
+    <label><input type="radio" name="q25" value="E"> E) 25</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(25)">Concluí</button>
+    <button onclick="proximaQuestao(25)">Próxima questão</button>
+    <button onclick="questaoAnterior(25)">Questão anterior</button>
+    <button onclick="refazerQuestao(25)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 26 -->
+<div class="questao" data-id="26" id="questao-26">
+  <div class="topo-questao">
+    <div class="numero">Questão 26</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte"><em>ENEM 2025</em></div>
+
+  <p>
+    O cortisol é um hormônio produzido pelas glândulas adrenais e pode ser considerado
+    um importante marcador do estresse fisiológico. Em um estudo desenvolvido com
+    enfermeiros, foi verificado que a concentração de cortisol salivar em um dia de
+    trabalho, denotada por <strong>T</strong>, era, em média, <strong>1,59 vezes</strong>
+    a concentração de cortisol salivar em um dia de folga, denotada por <strong>F</strong>.
+  </p>
+
+  <p class="referencia">
+    ROCHA, M. C. P. et al. <em>Estresse em enfermeiros: o uso do cortisol salivar no dia
+    de trabalho e de folga.</em> Rev. Esc. Enferm. USP, n. 5, 2013 (adaptado).
+  </p>
+
+  <p>
+    Nesse estudo, a relação obtida entre <strong>T</strong> e <strong>F</strong> foi
+  </p>
+
+  <div class="alternativas">
+    <label>
+      <input type="radio" name="q26" value="A">
+      A) T = 1,59 + F
+    </label>
+
+    <label>
+      <input type="radio" name="q26" value="B">
+      B) F = 1,59 + T
+    </label>
+
+    <label>
+      <input type="radio" name="q26" value="C">
+      C) T / F = 1,59
+    </label>
+
+    <label>
+      <input type="radio" name="q26" value="D">
+      D) F / T = 1,59
+    </label>
+
+    <label>
+      <input type="radio" name="q26" value="E">
+      E) F · T = 1,59
+    </label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(26)">Concluí</button>
+    <button onclick="proximaQuestao(26)">Próxima questão</button>
+    <button onclick="questaoAnterior(26)">Questão anterior</button>
+    <button onclick="refazerQuestao(26)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 27 -->
+<div class="questao" data-id="27" id="questao-27">
+  <div class="topo-questao">
+    <div class="numero">Questão 27</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte"><em>ENEM 2025</em></div>
+
+  <p>
+    A luminância de um objeto é a grandeza que descreve a quantidade de luz produzida
+    ou refletida por sua superfície. Ela está definida como a razão entre a intensidade
+    luminosa, medida em candela (<strong>cd</strong>), e o quadrado da distância do objeto
+    até o foco de luz, medida em metro (<strong>m</strong>).
+  </p>
+
+  <p>
+    A unidade de medida da luminância de um objeto é
+  </p>
+
+  <div class="alternativas">
+    <label>
+      <input type="radio" name="q27" value="A">
+      A) cd / m²
+    </label>
+
+    <label>
+      <input type="radio" name="q27" value="B">
+      B) m² / cd
+    </label>
+
+    <label>
+      <input type="radio" name="q27" value="C">
+      C) cd / m
+    </label>
+
+    <label>
+      <input type="radio" name="q27" value="D">
+      D) m / cd
+    </label>
+
+    <label>
+      <input type="radio" name="q27" value="E">
+      E) m / cd²
+    </label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(27)">Concluí</button>
+    <button onclick="proximaQuestao(27)">Próxima questão</button>
+    <button onclick="questaoAnterior(27)">Questão anterior</button>
+    <button onclick="refazerQuestao(27)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 28 -->
+<div class="questao" data-id="28" id="questao-28">
+  <div class="topo-questao">
+    <div class="numero">Questão 28</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte"><em>ENEM 2023</em></div>
+
+  <p>
+    Entre maratonistas, um parâmetro utilizado é o de economia de corrida (EC).
+    O valor desse parâmetro é calculado pela razão entre o consumo de oxigênio,
+    em mililitro (<strong>mL</strong>) por minuto (<strong>min</strong>), e a massa,
+    em quilograma (<strong>kg</strong>), do atleta correndo a uma velocidade constante.
+  </p>
+
+  <p class="referencia">
+    Disponível em: www.treinamentoonline.com.br. Acesso em: 23 out. 2019 (adaptado).
+  </p>
+
+  <p>
+    Um maratonista, visando melhorar sua performance, auxiliado por um médico,
+    mensura o seu consumo de oxigênio por minuto à velocidade constante. Com base
+    nesse consumo e na massa do atleta, o médico calcula o EC do atleta.
+  </p>
+
+  <p>
+    A unidade de medida da grandeza descrita pelo parâmetro EC é
+  </p>
+
+  <div class="alternativas">
+    <label>
+      <input type="radio" name="q28" value="A">
+      A) min / (mL · kg)
+    </label>
+
+    <label>
+      <input type="radio" name="q28" value="B">
+      B) mL / (min · kg)
+    </label>
+
+    <label>
+      <input type="radio" name="q28" value="C">
+      C) (min · mL) / kg
+    </label>
+
+    <label>
+      <input type="radio" name="q28" value="D">
+      D) (min · kg) / mL
+    </label>
+
+    <label>
+      <input type="radio" name="q28" value="E">
+      E) (mL · kg) / min
+    </label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(28)">Concluí</button>
+    <button onclick="proximaQuestao(28)">Próxima questão</button>
+    <button onclick="questaoAnterior(28)">Questão anterior</button>
+    <button onclick="refazerQuestao(28)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 29 -->
+<div class="questao" data-id="29" id="questao-29">
+  <div class="topo-questao">
+    <div class="numero">Questão 29</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte"><em>ENEM PPL 2023</em></div>
+
+  <p>
+    Mariana não tem computador pessoal em casa e precisa fazer uma pesquisa na
+    internet para um trabalho de escola. Então, foi até uma lan house perto de
+    sua casa. Na porta da lan house havia esta placa:
+  </p>
+
+  <!-- Espaço para imagem -->
+  <div style="margin: 15px 0; text-align: center;">
+  <img 
+    src="https://res.cloudinary.com/demx2vuon/image/upload/v1767633442/image-102.png_ezwzha.webp"
+    alt="Gráfico da distância percorrida e consumo de combustível dos carros"
+    style="max-width: 100%; height: auto; display: block;"
+  />
+</div>
+
+  <p>
+    Assim, quantos reais Mariana pagaria para ficar uma hora e meia usando a
+    internet nessa lan house?
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q29" value="A"> A) R$ 0,18.</label>
+    <label><input type="radio" name="q29" value="B"> B) R$ 2,18.</label>
+    <label><input type="radio" name="q29" value="C"> C) R$ 3,08.</label>
+    <label><input type="radio" name="q29" value="D"> D) R$ 3,18.</label>
+    <label><input type="radio" name="q29" value="E"> E) R$ 12,80.</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(29)">Concluí</button>
+    <button onclick="proximaQuestao(29)">Próxima questão</button>
+    <button onclick="questaoAnterior(29)">Questão anterior</button>
+    <button onclick="refazerQuestao(29)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 30 -->
+<div class="questao" data-id="30" id="questao-30">
+  <div class="topo-questao">
+    <div class="numero">Questão 30</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte"><em>ENEM 2012</em></div>
+
+  <p>
+    Há, em virtude da demanda crescente de economia de água, equipamentos e utensílios como, por exemplo, as bacias sanitárias ecológicas, que utilizam 6 litros de água por descarga em vez dos 15 litros utilizados por bacias sanitárias não ecológicas, conforme dados da Associação Brasileira de Normas Técnicas (ABNT).
+  </p>
+
+  <p>
+    Qual será a economia diária de água obtida por meio da substituição de uma bacia sanitária não ecológica, que gasta cerca de 60 litros por dia com a descarga, por uma bacia sanitária ecológica?
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q30" value="A"> A) 24 litros</label>
+    <label><input type="radio" name="q30" value="B"> B) 36 litros</label>
+    <label><input type="radio" name="q30" value="C"> C) 40 litros</label>
+    <label><input type="radio" name="q30" value="D"> D) 42 litros</label>
+    <label><input type="radio" name="q30" value="E"> E) 50 litros</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(30)">Concluí</button>
+    <button onclick="proximaQuestao(30)">Próxima questão</button>
+    <button onclick="questaoAnterior(30)">Questão anterior</button>
+    <button onclick="refazerQuestao(30)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 31 -->
+<div class="questao" data-id="31" id="questao-31">
+  <div class="topo-questao">
+    <div class="numero">Questão 31</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte"><em>ENEM PPL 2018</em></div>
+
+  <p>
+    A relação de Newton-Laplace estabelece que o módulo volumétrico de um fluido é diretamente proporcional ao quadrado da velocidade do som (em metro por segundo) no fluido e à sua densidade (em quilograma por metro cúbico), com uma constante de proporcionalidade adimensional.
+
+  <p>
+   Nessa relação, a unidade de medida adequada para o módulo volumétrico é 
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q31" value="A"> A) kg·m⁻²·s⁻¹</label>
+    <label><input type="radio" name="q31" value="B"> B) kg·m⁻¹·s⁻²</label>
+    <label><input type="radio" name="q31" value="C"> C) kg·m⁻⁵·s²</label>
+    <label><input type="radio" name="q31" value="D"> D) kg⁻¹·m·s²</label>
+    <label><input type="radio" name="q31" value="E"> E) kg⁻¹·m⁵·s⁻²</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(31)">Concluí</button>
+    <button onclick="proximaQuestao(31)">Próxima questão</button>
+    <button onclick="questaoAnterior(31)">Questão anterior</button>
+    <button onclick="refazerQuestao(31)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 32 -->
+<div class="questao" data-id="32" id="questao-32">
+  <div class="topo-questao">
+    <div class="numero">Questão 32</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte"><em>ENEM PPL 2023</em></div>
+
+  <p>
+   Uma pessoa foi a um supermercado comprar uma caixa de sabão em pó. Lá encontrou várias marcas desse produto, disponibilizado em embalagens com diferentes capacidades e preços. No quadro são fornecidos o preço, em real, e o conteúdo, em quilograma, das embalagens de cinco diferentes marcas de sabão em pó que estão à venda nesse supermercado.
+  </p>
+
+  <!-- Espaço para imagem -->
+  <div style="margin: 15px 0; text-align: center;">
+  <img 
+    src="https://res.cloudinary.com/demx2vuon/image/upload/v1767633502/image-111.png_jkiwvz.webp"
+    alt="Gráfico da distância percorrida e consumo de combustível dos carros"
+    style="max-width: 100%; height: auto; display: block;"
+  />
+</div>
+
+  <p>
+     A marca cuja embalagem oferece o menor preço, em real,
+por quilograma de sabão em pó é
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q32" value="A"> a) I</label>
+    <label><input type="radio" name="q32" value="B"> b) II</label>
+    <label><input type="radio" name="q32" value="C"> c) III</label>
+    <label><input type="radio" name="q32" value="D"> d) IV</label>
+    <label><input type="radio" name="q32" value="E"> e) V</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(32)">Concluí</button>
+    <button onclick="proximaQuestao(32)">Próxima questão</button>
+    <button onclick="questaoAnterior(32)">Questão anterior</button>
+    <button onclick="refazerQuestao(32)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 33 -->
+<div class="questao" data-id="33" id="questao-33">
+  <div class="topo-questao">
+    <div class="numero">Questão 33</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte"><em>ENEM LIBRAS 2017</em></div>
+
+  <p>
+    Um jogo de boliche consiste em arremessar uma bola sobre uma pista com o objetivo de atingir e derrubar o maior número de pinos. Para escolher um dentre cinco jogadores para completar sua equipe, um técnico calcula, para cada jogador, a razão entre o número de arremessos em que ele derrubou todos os pinos e o total de arremessos efetuados por esse jogador. O técnico escolherá o jogador que obtiver a maior razão. O desempenho dos jogadores está no quadro.
+  </p>
+
+  <p>O desempenho dos jogadores está no quadro.</p>
+
+  <!-- Espaço para imagem -->
+ <div style="margin: 15px 0; text-align: center;">
+  <img 
+    src="https://res.cloudinary.com/demx2vuon/image/upload/v1767633554/Um-jogo-de-boliche-consiste.png_kc6opa.webp"
+    alt="Gráfico da distância percorrida e consumo de combustível dos carros"
+    style="max-width: 100%; height: auto; display: block;"
+  />
+</div>
+
+  <p>Deve ser escolhido o jogador</p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q33" value="A"> A) I</label>
+    <label><input type="radio" name="q33" value="B"> B) II</label>
+    <label><input type="radio" name="q33" value="C"> C) III</label>
+    <label><input type="radio" name="q33" value="D"> D) IV</label>
+    <label><input type="radio" name="q33" value="E"> E) V</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(33)">Concluí</button>
+    <button onclick="proximaQuestao(33)">Próxima questão</button>
+    <button onclick="questaoAnterior(33)">Questão anterior</button>
+    <button onclick="refazerQuestao(33)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 34 -->
+<div class="questao" data-id="34" id="questao-34">
+  <div class="topo-questao">
+    <div class="numero">Questão 34</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte"><em>ENEM PPL 2012</em></div>
+
+  <p>
+    Um pintor dispõe de 35 litros de tinta vermelha e de 30 litros de tinta branca. Ele deseja misturar essas tintas na proporção de 5 litros de tinta vermelha para cada 3 litros de tinta branca para obter um tom de tinta mais claro. Para obter o maior volume possível de tinta misturada, ele deverá utilizar toda a tinta disponível de uma das cores e sobrará uma certa quantidade de tinta da outra cor.
+  </p>
+
+  <p>
+    Quantos litros de tinta sobrarão sem serem misturados?
+  </p>
+
+
+  <div class="alternativas">
+    <label><input type="radio" name="q34" value="A"> A) 5</label>
+    <label><input type="radio" name="q34" value="B"> B) 9</label>
+    <label><input type="radio" name="q34" value="C"> C) 12</label>
+    <label><input type="radio" name="q34" value="D"> D) 14</label>
+    <label><input type="radio" name="q34" value="E"> E) 17</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(34)">Concluí</button>
+    <button onclick="proximaQuestao(34)">Próxima questão</button>
+    <button onclick="questaoAnterior(34)">Questão anterior</button>
+    <button onclick="refazerQuestao(34)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 35 -->
+<div class="questao" data-id="35" id="questao-35">
+  <div class="topo-questao">
+    <div class="numero">Questão 35</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte"><em>ENEM 2016</em></div>
+
+  <p>
+    Cinco marcas de pão integral apresentam as seguintes concentrações de fibras (massa de fibra por massa de pão):
+  </p>
+
+  <ul>
+    <li>Marca A: 2 g de fibras a cada 50 g de pão;</li>
+    <li>Marca B: 5 g de fibras a cada 40 g de pão;</li>
+    <li>Marca C: 5 g de fibras a cada 100 g de pão;</li>
+    <li>Marca D: 6 g de fibras a cada 90 g de pão;</li>
+    <li>Marca E: 7 g de fibras a cada 70 g de pão.</li>
+  </ul>
+
+  <p>
+    Recomenda-se a ingestão do pão que possui a maior concentração de fibras.
+  </p>
+
+  <p>A marca a ser escolhida é:</p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q35" value="A"> a) A</label>
+    <label><input type="radio" name="q35" value="B"> b) B</label>
+    <label><input type="radio" name="q35" value="C"> c) C</label>
+    <label><input type="radio" name="q35" value="D"> d) D</label>
+    <label><input type="radio" name="q35" value="E"> e) E</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(35)">Concluí</button>
+    <button onclick="proximaQuestao(35)">Próxima questão</button>
+    <button onclick="questaoAnterior(35)">Questão anterior</button>
+    <button onclick="refazerQuestao(35)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 36 -->
+<div class="questao" data-id="36" id="questao-36">
+  <div class="topo-questao">
+    <div class="numero">Questão 36</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte"><em>ENEM LIBRAS 2017</em></div>
+
+  <p>
+   Uma padaria fabrica biscoitos que são embalados em pacotes com dez unidades, e cada pacote pesa 85 gramas. Na informação ao consumidor lê-se: “A cada 15 gramas do biscoito correspondem 90 quilocalorias”.
+
+
+  </p>
+
+  <p>Quantas quilocalorias tem um desses biscoitos?</p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q36" value="A"> A) 6</label>
+    <label><input type="radio" name="q36" value="B"> B) 14</label>
+    <label><input type="radio" name="q36" value="C"> C) 51</label>
+    <label><input type="radio" name="q36" value="D"> D) 60</label>
+    <label><input type="radio" name="q36" value="E"> E) 510</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(36)">Concluí</button>
+    <button onclick="proximaQuestao(36)">Próxima questão</button>
+    <button onclick="questaoAnterior(36)">Questão anterior</button>
+    <button onclick="refazerQuestao(36)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 37 -->
+<div class="questao" data-id="37" id="questao-37">
+  <div class="topo-questao">
+    <div class="numero">Questão 37</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte"><em>ENEM PPL 2023</em></div>
+
+  <p>
+    Em um ateliê de costura, para confeccionar 200 calças jeans, em 5 dias de trabalho, são necessários 10 funcionários. Devido a uma crise financeira no ateliê, a gerência decidiu demitir 4 funcionários visando a redução de custos. Sabe-se que a produção deverá ser mantida com o novo quadro de funcionários, ou seja, após a demissão.
+  </p>
+
+  <p>
+    Em quantos dias de trabalho o novo quadro de funcionários confeccionará a mesma quantidade de calças jeans?
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q37" value="A"> A) 2,0</label>
+    <label><input type="radio" name="q37" value="B"> B) 3,0</label>
+    <label><input type="radio" name="q37" value="C"> C) 3,3</label>
+    <label><input type="radio" name="q37" value="D"> D) 8,3</label>
+    <label><input type="radio" name="q37" value="E"> E) 12,0</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(37)">Concluí</button>
+    <button onclick="proximaQuestao(37)">Próxima questão</button>
+    <button onclick="questaoAnterior(37)">Questão anterior</button>
+    <button onclick="refazerQuestao(37)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 38 -->
+<div class="questao" data-id="38" id="questao-38">
+  <div class="topo-questao">
+    <div class="numero">Questão 38</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte"><em>ENEM 2013</em></div>
+
+  <p>
+    Uma indústria tem um reservatório de água com capacidade para 900 m3. Quando há necessidade de limpeza do reservatório, toda a água precisa ser escoada. O escoamento da água é feito por seis ralos, e dura 6 horas quando o reservatório está cheio. Esta indústria construirá um novo reservatório, com capacidade de 500 m3, cujo escoamento da água deverá ser realizado em 4 horas, quando o reservatório estiver cheio. Os ralos utilizados no novo reservatório deverão ser idênticos aos do já existente.
+  </p>
+
+  <p>
+    A quantidade de ralos do novo reservatório deverá ser igual a
+  </p>
+
+
+  <div class="alternativas">
+    <label><input type="radio" name="q38" value="A"> A) 2</label>
+    <label><input type="radio" name="q38" value="B"> B) 4</label>
+    <label><input type="radio" name="q38" value="C"> C) 5</label>
+    <label><input type="radio" name="q38" value="D"> D) 8</label>
+    <label><input type="radio" name="q38" value="E"> E) 9</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(38)">Concluí</button>
+    <button onclick="proximaQuestao(38)">Próxima questão</button>
+    <button onclick="questaoAnterior(38)">Questão anterior</button>
+    <button onclick="refazerQuestao(38)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 39 -->
+<div class="questao" data-id="39" id="questao-39">
+  <div class="topo-questao">
+    <div class="numero">Questão 39</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte"><em>ENEM 2011</em></div>
+
+  <p>
+    Nos últimos cinco anos, 32 mil mulheres de 20 a 24 anos foram internadas nos hospitais do SUS por causa de AVC. Entre os homens da mesma faixa etária, houve 28 mil internações pelo mesmo motivo.
+  </p>
+
+  <p>
+    Suponha que, nos próximos cinco anos, haja um acréscimo de 8 mil internações de mulheres e que o acréscimo de internações de homens por AVC ocorra na mesma proporção.
+  </p>
+
+  <p>
+    De acordo com as informações dadas, o número de homens que seriam internados por AVC, nos próximos cinco anos, corresponderia a
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q39" value="A"> A) 4 mil</label>
+    <label><input type="radio" name="q39" value="B"> B) 9 mil</label>
+    <label><input type="radio" name="q39" value="C"> C) 21 mil</label>
+    <label><input type="radio" name="q39" value="D"> D) 35 mil</label>
+    <label><input type="radio" name="q39" value="E"> E) 39 mil</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(39)">Concluí</button>
+    <button onclick="proximaQuestao(39)">Próxima questão</button>
+    <button onclick="questaoAnterior(39)">Questão anterior</button>
+    <button onclick="refazerQuestao(39)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 40 -->
+<div class="questao" data-id="40" id="questao-40">
+  <div class="topo-questao">
+    <div class="numero">Questão 40</div>
+    <div class="dificuldade">Fácil</div>
+  </div>
+
+  <div class="fonte"><em>ENEM 2020</em></div>
+
+  <p>
+    Um pé de eucalipto em idade adequada para o corte rende, em média, 20 mil folhas de papel A4. A densidade superficial do papel A4, medida pela razão da massa de uma folha desse papel por sua área, é de 75 gramas por metro quadrado, e a área de uma folha de A4 é 0,062 metro quadrado.
+  </p>
+
+  <p>
+    Nessas condições, quantos quilogramas de papel rende, em média, um pé de eucalipto?
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q40" value="A"> A) 4.301</label>
+    <label><input type="radio" name="q40" value="B"> B) 1.500</label>
+    <label><input type="radio" name="q40" value="C"> C) 930</label>
+    <label><input type="radio" name="q40" value="D"> D) 267</label>
+    <label><input type="radio" name="q40" value="E"> E) 93</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(40)">Concluí</button>
+    <button onclick="proximaQuestao(40)">Próxima questão</button>
+    <button onclick="questaoAnterior(40)">Questão anterior</button>
+    <button onclick="refazerQuestao(40)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 41 -->
+<div class="questao" data-id="41" id="questao-41" style="display:none;">
+  <div class="topo-questao">
+    <div class="numero">Questão 41</div>
+    <div class="dificuldade facil">Fácil</div>
+  </div>
+
+  <div class="fonte"><em>ENEM 2016</em></div>
+
+  <p>
+    Diante da hipótese do comprometimento da qualidade da água retirada do volume morto de alguns sistemas hídricos, os técnicos de um laboratório decidiram testar cinco tipos de filtro de água. Dentre esses, os quatro com melhor desempenho serão escolhidos para futura comercialização. Nos testes, foram medidas as massas de agentes contaminantes, em miligrama, que não são capturados por cada filtro em diferentes períodos, em dia, como consegue:
+  </p>
+
+  <ul>
+    <li>Filtro 1 (F1): 18 mg em 6 dias;</li>
+    <li>Filtro 2 (F2): 15 mg em 3 dias;</li>
+    <li>Filtro 3 (F3): 18 mg em 4 dias;</li>
+    <li>Filtro 4 (F4): 6 mg em 3 dias;</li>
+    <li>Filtro 5 (F5): 3 mg em 2 dias.</li>
+  </ul>
+
+  <p>
+    Ao final descarta-se o filtro com maior razão entre a medida da massa de contaminantes não capturados e o número de dias, o que corresponde ao de pior desempenho.
+  </p>
+
+  <p><em>Disponível em: www.redebrasilatual.com.br. Acesso em: 12 jul. 2015 (adaptado).</em></p>
+
+  <p>O filtro descartado é</p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q41" value="A"> a) F1</label>
+    <label><input type="radio" name="q41" value="B"> b) F2</label>
+    <label><input type="radio" name="q41" value="C"> c) F3</label>
+    <label><input type="radio" name="q41" value="D"> d) F4</label>
+    <label><input type="radio" name="q41" value="E"> e) F5</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(41)">Concluí</button>
+    <button onclick="proximaQuestao(41)">Próxima questão</button>
+    <button onclick="questaoAnterior(41)">Questão anterior</button>
+    <button onclick="refazerQuestao(41)">Refazer</button>
+  </div>
+</div>
+
+<!-- Questão 42 -->
+<div class="questao" data-id="42" id="questao-42" style="display:none;">
+  <div class="topo-questao">
+    <div class="numero">Questão 42</div>
+    <div class="dificuldade facil">Fácil</div>
+  </div>
+
+  <div class="fonte"><em>ENEM PPL 2018</em></div>
+
+  <p>
+    Ao acessar uma página da internet, que trata da pesquisa de assuntos de interesse juvenil, encontramos a figura:
+  </p>
+
+  <div style="margin: 15px 0; text-align: center;">
+  <img 
+    src="https://res.cloudinary.com/demx2vuon/image/upload/v1767633654/image-119_rb6zhs.webp"
+    alt="Gráfico da distância percorrida e consumo de combustível dos carros"
+    style="max-width: 100%; height: auto; display: block;"
+  />
+</div>
+
+  <p>
+    Sabe-se que nesse tipo de comunicação visual, comum em páginas da internet, o tamanho das letras está diretamente associado ao número de vezes que o assunto ou termo foi pesquisado ou lido naquela página. Dessa forma, quanto maior o tamanho das letras de cada palavra, maior será o número de vezes que esse tema foi pesquisado.
+  </p>
+
+  <p>
+    De acordo com a figura, quais são, em ordem decrescente, os três assuntos que mais interessaram às pessoas que acessaram a página citada?
+  </p>
+
+  <div class="alternativas">
+    <label><input type="radio" name="q42" value="A"> A) HQ, FÉ, PAZ.</label>
+    <label><input type="radio" name="q42" value="B"> B) MANGÁS, FÉ, LIVROS.</label>
+    <label><input type="radio" name="q42" value="C"> C) MÚSICA, BALADAS, AMOR.</label>
+    <label><input type="radio" name="q42" value="D"> D) AMOR, MÚSICA, BALADAS.</label>
+    <label><input type="radio" name="q42" value="E"> E) AMOR, BALADAS, MÚSICA.</label>
+  </div>
+
+  <div class="acoes">
+    <button onclick="concluir(42)">Concluí</button>
+    <button onclick="proximaQuestao(42)">Próxima questão</button>
+    <button onclick="questaoAnterior(42)">Questão anterior</button>
+    <button onclick="refazerQuestao(42)">Refazer</button>
+  </div>
+</div>
+
+
+
+  <!-- Modal de finalização -->
+  <div id="modal-final" style="
+    display: none; position: fixed; top:0; left:0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7); justify-content: center; align-items: center; z-index: 9999;
+  ">
+    <div style="
+      background:#fff; padding: 25px 30px; border-radius: 12px; max-width: 400px; width: 90%;
+      text-align: center; box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    ">
+      <h2>Parabéns! Você concluiu a lista.</h2>
+      <p id="resultado-dificuldades" style="font-size: 16px; margin: 20px 0;"></p>
+      <button onclick="fecharModal()" style="
+        background:#6c5ce7; color:#fff; border:none; padding: 10px 20px; font-size: 14px;
+        cursor: pointer; border-radius: 6px;"
+      >Fechar</button>
+    </div>
+  </div>
+
+   <script>
+  const total = 42;
+  let concluidas = 0;
+
+  // Gabarito corrigido conforme seu código
+  const gabaritos = {
+    1: 'A', 2: 'A', 3: 'B', 4: 'E', 5: 'A', 6: 'D', 7: 'E', 8: 'D', 9: 'A', 10: 'D',
+    11: 'C', 12: 'D', 13: 'V', 14: '3', 15: 'I', 16: 'A', 17: 'III', 18: 'B', 19: 'C', 20: 'E',
+    21: 'B', 22: 'A', 23: 'A', 24: 'D', 25: 'C', 26: 'C', 27: 'A', 28: 'B', 29: 'E', 30: 'B',
+    31: 'B', 32: 'B', 33: 'D', 34: 'B', 35: 'B', 36: 'C', 37: 'D', 38: 'C', 39: 'D', 40: 'E',
+    41: 'B', 42: 'E'
+  };
+
+  // Salvar estado de questão no localStorage
+  function salvarEstado(id, respostaSelecionadaValue, concluida) {
+    let estados = JSON.parse(localStorage.getItem('estadoQuestoes')) || {};
+
+    estados[id] = {
+      resposta: respostaSelecionadaValue || null,
+      concluida: !!concluida
+    };
+
+    localStorage.setItem('estadoQuestoes', JSON.stringify(estados));
+  }
+
+  // Restaurar estado ao carregar
+  function restaurarEstado() {
+    let estados = JSON.parse(localStorage.getItem('estadoQuestoes')) || {};
+    concluidas = 0;
+
+    for (let id = 1; id <= total; id++) {
+      const questao = document.getElementById('questao-' + id);
+      if (!questao) continue;
+
+      const estado = estados[id];
+      const radios = questao.querySelectorAll('input[type="radio"]');
+
+      if (estado) {
+        radios.forEach(radio => {
+          radio.checked = radio.value === estado.resposta;
+          if (estado.concluida) {
+            radio.disabled = true;
+            const label = radio.parentElement;
+            if (radio.value === gabaritos[id]) {
+              label.style.backgroundColor = '#55efc4'; // verde
+            }
+            if (radio.checked && radio.value !== gabaritos[id]) {
+              label.style.backgroundColor = '#ff7675'; // vermelho
+            }
+          } else {
+            radio.disabled = false;
+            radio.parentElement.style.backgroundColor = '';
+          }
+        });
+        if (estado.concluida) {
+          concluidas++;
+        }
+      } else {
+        radios.forEach(radio => {
+          radio.checked = false;
+          radio.disabled = false;
+          radio.parentElement.style.backgroundColor = '';
+        });
+      }
+    }
+    atualizar();
+  }
+
+  function criarListaQuestoes() {
+    const lista = document.getElementById('lista-questoes');
+    lista.innerHTML = '';
+    for (let i = 1; i <= total; i++) {
+      const btn = document.createElement('button');
+      btn.classList.add('quest-link');
+      btn.textContent = i;
+      btn.title = `Ir para a Questão ${i}`;
+      btn.onclick = function () {
+        abrirQuestao(i);
+      };
+      lista.appendChild(btn);
+    }
+  }
+
+  function abrirQuestao(id) {
+    document.querySelectorAll('.questao').forEach(q => {
+      q.style.display = q.dataset.id == id ? 'block' : 'none';
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function atualizar() {
+    document.getElementById('contador').innerText = concluidas;
+    document.getElementById('progress').style.width = (concluidas / total * 100) + '%';
+  }
+
+  function concluir(id) {
+    const questao = document.getElementById('questao-' + id);
+    const respostaSelecionada = questao.querySelector('input[type="radio"]:checked');
+
+    if (!respostaSelecionada) {
+      alert('Por favor, selecione uma alternativa antes de concluir.');
+      return;
+    }
+
+    const correta = gabaritos[id];
+    const radios = questao.querySelectorAll('input[type="radio"]');
+
+    radios.forEach(radio => {
+      radio.disabled = true;
+      const label = radio.parentElement;
+      if (radio.value === correta) {
+        label.style.backgroundColor = '#55efc4'; // verde
+      }
+      if (radio.checked && radio.value !== correta) {
+        label.style.backgroundColor = '#ff7675'; // vermelho
+      }
+    });
+
+    salvarEstado(id, respostaSelecionada.value, true);
+
+    concluidas++;
+    atualizar();
+
+    if (concluidas === total) {
+      mostrarModalResultados();
+    }
+  }
+
+  function proximaQuestao(idAtual) {
+    const proximoId = idAtual + 1;
+    if (proximoId <= total && document.getElementById('questao-' + proximoId)) {
+      abrirQuestao(proximoId);
+    }
+  }
+
+  function questaoAnterior(idAtual) {
+    const anteriorId = idAtual - 1;
+    if (anteriorId >= 1 && document.getElementById('questao-' + anteriorId)) {
+      abrirQuestao(anteriorId);
+    }
+  }
+
+  function refazerQuestao(id) {
+    const questao = document.getElementById('questao-' + id);
+    const radios = questao.querySelectorAll('input[type="radio"]');
+    radios.forEach(radio => {
+      radio.disabled = false;
+      radio.checked = false;
+      radio.parentElement.style.backgroundColor = '';
+    });
+    salvarEstado(id, null, false);
+
+    if (concluidas > 0) {
+      concluidas--;
+    }
+    atualizar();
+  }
+
+  function mostrarModalResultados() {
+    const resultadoElem = document.getElementById('resultado-dificuldades');
+    resultadoElem.innerHTML = `Você concluiu ${concluidas} questão(s). Parabéns!`;
+    document.getElementById('modal-final').style.display = 'flex';
+
+    confetti({
+      particleCount: 150,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
+  }
+
+  function fecharModal() {
+    document.getElementById('modal-final').style.display = 'none';
+  }
+
+  window.onload = () => {
+    criarListaQuestoes();
+    abrirQuestao(1);
+    restaurarEstado();
+  };
+
+  document.getElementById('btn-todas-questoes').onclick = () => {
+    const lista = document.getElementById('lista-questoes');
+    lista.style.display = lista.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+
+</body>
+
+</html>
